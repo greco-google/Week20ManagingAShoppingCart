@@ -32,8 +32,8 @@ public class Cart {
 	
 	public void showOrder() {
 		for(Items order: orders) {
-			System.out.println("Item: " + order.getVariety() 
-			+ " Boxes: " + order.getnumItem());
+			System.out.println("Item: " + order.getVariety() + "/t Price: " + order.getPrice()
+			+ "/n Quantity: " + order.getnumItem());
 		}
 	}
 

@@ -15,6 +15,10 @@ public class Items {
 			return variety;
 		}
 		
+		public String getPrice() {
+			return variety;
+		}
+		
 		public int getnumItem() {
 			return numItem;
 		}
