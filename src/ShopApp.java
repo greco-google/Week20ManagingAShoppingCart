@@ -6,8 +6,8 @@ public class ShopApp {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 
-	MasterOrder myOrder = new MasterOrder();
-	CookieOrder order;
+	Cart myOrder = new Cart();
+	Items order;
 	
 	System.out.println("Welcome to our Girl Scout Cookie Ordererer");
 	System.out.println("Please select a task");
@@ -27,7 +27,7 @@ public class ShopApp {
 			System.out.println("How many boxes of " + variety + " do you want?");
 			int numBoxes = input.nextInt();
 			input.nextLine();
-			order = new CookieOrder(variety, numBoxes);
+			order = new Items(variety, numBoxes);
 			myOrder.addOrder(order);
 			}
 		
