@@ -2,19 +2,21 @@ public class Items {
 
 		
 		private String variety;
-		private int numBoxes;
-		public Items(String variety, int numBoxes) {
+		private int numItem;
+		private int price;
+		public Items(String variety, int price, int numItem) {
 			super();
 			this.variety = variety;
-			this.numBoxes = numBoxes;
+			this.price = price;
+			this.numItem = numItem;
 		}
 		
 		public String getVariety() {
 			return variety;
 		}
 		
-		public int getNumBoxes() {
-			return numBoxes;
+		public int getnumItem() {
+			return numItem;
 		}
 
 

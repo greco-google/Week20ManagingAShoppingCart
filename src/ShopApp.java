@@ -25,9 +25,9 @@ public class ShopApp {
 			//System.out.println("[Thin Mints], [Tagalongs], [Samoas], [Dosidos]");
 			String variety = input.nextLine();
 			System.out.println("How many boxes of " + variety + " do you want?");
-			int numBoxes = input.nextInt();
+			int numItem = input.nextInt();
 			input.nextLine();
-			order = new Items(variety, numBoxes);
+			order = new Items(variety, price, numItem);
 			myOrder.addOrder(order);
 			}
 		
@@ -44,9 +44,9 @@ public class ShopApp {
 			//System.out.println("[Thin Mints], [Tagalongs], [Samoas], [Dosidos]");
 			String variety = input.nextLine();
 			System.out.println("Now, how many boxes of " + variety + " do you want?");
-			int numBoxes = input.nextInt();
+			int numItem = input.nextInt();
 			input.nextLine();
-			myOrder.updateOrder(variety, numBoxes);
+			myOrder.updateOrder(variety, numItem);
 
 			}
 		

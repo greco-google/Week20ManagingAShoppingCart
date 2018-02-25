@@ -16,7 +16,7 @@ public class Cart {
 	public int getTotalBoxes() {
 		int totalBoxes = 0;
 		for(Items order: orders) {
-			totalBoxes += order.getNumBoxes();
+			totalBoxes += order.getnumItem();
 		}
 	return totalBoxes;
 		
@@ -32,15 +32,15 @@ public class Cart {
 	
 	public void showOrder() {
 		for(Items order: orders) {
-			System.out.println("Variety: " + order.getVariety() 
-			+ " Boxes: " + order.getNumBoxes());
+			System.out.println("Item: " + order.getVariety() 
+			+ " Boxes: " + order.getnumItem());
 		}
 	}
 
-	public void updateOrder(String variety, int numBoxes) {
+	public void updateOrder(String variety, int numItem) {
 		for(int i = 0; i < orders.size(); i++) {
 			if(orders.get(i).getVariety().equals(variety)) {
-				orders.set(i, new Items(variety, numBoxes));
+				orders.set(i, new Items(variety, price, numItem));
 			}
 		}
 		
