@@ -5,7 +5,7 @@ public class Cart {
 	private ArrayList <Items> orders = new ArrayList<>();
 	
 	//Default no argument constructor
-	public MasterOrder() {
+	public Cart() {
 		
 	}
 	
