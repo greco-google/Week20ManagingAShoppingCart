@@ -46,7 +46,7 @@ public class ShopApp {
 			System.out.println("Now, how many boxes of " + variety + " do you want?");
 			int numItem = input.nextInt();
 			input.nextLine();
-			myOrder.updateOrder(variety, numItem);
+			myOrder.updateOrder(variety, price, numItem);
 
 			}
 		
