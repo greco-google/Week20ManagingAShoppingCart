@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Cart {
 	
-	private ArrayList <Items> orders = new ArrayList<>();
+	public ArrayList <Items> orders = new ArrayList<>();
 	
 	//Default no argument constructor
 	public Cart() {
