@@ -24,6 +24,8 @@ public class ShopApp {
 			System.out.println("What item would you like?");
 			//System.out.println("[Thin Mints], [Tagalongs], [Samoas], [Dosidos]");
 			String variety = input.nextLine();
+			System.out.println("What is the price of that item?");
+			double price = input.nextDouble();
 			System.out.println("How many boxes of " + variety + " do you want?");
 			int numItem = input.nextInt();
 			input.nextLine();
@@ -43,6 +45,8 @@ public class ShopApp {
 			System.out.println("What type of cookie do you want to update?");
 			//System.out.println("[Thin Mints], [Tagalongs], [Samoas], [Dosidos]");
 			String variety = input.nextLine();
+			System.out.println("What is the price of that item?");
+			double price = input.nextDouble();
 			System.out.println("Now, how many boxes of " + variety + " do you want?");
 			int numItem = input.nextInt();
 			input.nextLine();
@@ -59,6 +63,7 @@ public class ShopApp {
 			}
 		
 		else if(choice.equals("5")) {
+			System.out.println("Your total today will be $" + totalPrice + "\nThank you for shopping with us today");
 			System.exit(0);
 			}
 		else {

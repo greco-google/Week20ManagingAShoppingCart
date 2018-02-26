@@ -13,14 +13,19 @@ public class Cart {
 		orders.add(theOrder);
 	}
 	
-	public int getTotalBoxes() {
-		int totalBoxes = 0;
+	public int getTotal() {
+		int total = 0;
 		for(Items order: orders) {
-			totalBoxes += order.getnumItem();
+			total += order.getnumItem();
 		}
-	return totalBoxes;
+	return total;
 		
 	}
+	
+	public void totalPrice() {
+		
+	}
+	
 	
 	public void removeVariety(String variety) {
 		for(int i = orders.size() - 1; i >= 0; i--) {
@@ -32,12 +37,13 @@ public class Cart {
 	
 	public void showOrder() {
 		for(Items order: orders) {
-			System.out.println("Item: " + order.getVariety() + "/t Price: " + order.getPrice()
-			+ "/n Quantity: " + order.getnumItem());
+			System.out.println("Item: " + order.getVariety() + "\t Price: $" + order.getPrice()
+			+ "\t Quantity: " + order.getnumItem() + "\nTotal Price: $" + order.getTotalPrice());
+			
 		}
 	}
 
-	public void updateOrder(String variety, int price, int numItem) {
+	public void updateOrder(String variety, double price, int numItem) {
 		for(int i = 0; i < orders.size(); i++) {
 			if(orders.get(i).getVariety().equals(variety)) {
 				orders.set(i, new Items(variety, price, numItem));

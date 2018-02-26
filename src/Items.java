@@ -3,16 +3,17 @@ public class Items {
 		
 		private String variety;
 		private int numItem;
-		private int price;
-		
-		private int Item1 = 1;
-		private int Item2 = 5;
-		private int Item3 = 8;
-		private int Item4 = 12;
-		private int Item5 = 15;
+		private double price;
+		private double totalPrice;
 
 
-		public Items(String variety, int price, int numItem) {
+
+
+		public void setTotalPrice(double totalPrice) {
+			this.totalPrice = totalPrice;
+		}
+
+		public Items(String variety, double price, int numItem) {
 			super();
 			this.variety = variety;
 			this.price = price;
@@ -23,16 +24,15 @@ public class Items {
 			return variety;
 		}
 		
-		public int getPrice() {
+		public double getPrice() {
 			return price;
 		}
 		
-		public void setPrice(int price) {
-			this.Item1 = Item1;
-			this.Item2 = Item2;
-			this.Item3 = Item3;
-			this.Item4 = Item4;
-			this.Item5 = Item5;
+		public double getTotalPrice() {
+			return totalPrice;
+		}
+		
+		public void setPrice(double price) {
 			
 		}
 		
