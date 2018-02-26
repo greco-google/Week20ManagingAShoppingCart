@@ -60,11 +60,12 @@ public class ShopApp {
 			System.out.println();
 			System.out.println("Your Current Order: ");
 			myOrder.showOrder();
+			System.out.println("Total Price: $" + totalPrice());
 			System.out.println();
 			}
 		
 		else if(choice.equals("5")) {
-			//System.out.println("Your total today will be $" + Items.getTotalPrice() + "\nThank you for shopping with us today");
+			System.out.println("Your total today will be $" + totalPrice() + "\nThank you for shopping with us today");
 			System.exit(0);
 			}
 		else {
