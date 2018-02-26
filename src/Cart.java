@@ -16,14 +16,13 @@ public class Cart {
 	public int getTotal() {
 		int total = 0;
 		for(Items order: orders) {
-			total += order.getnumItem();
+			total += order.getnumItem() * order.getnumItem();
 		}
 	return total;
 		
 	}
 	
 	public void totalPrice() {
-		
 	}
 	
 	
@@ -39,6 +38,13 @@ public class Cart {
 		for(Items order: orders) {
 			System.out.println("Item: " + order.getVariety() + "\t Price: $" + order.getPrice()
 			+ "\t Quantity: " + order.getnumItem() + "\nTotal Price: $" + order.getTotalPrice());
+			
+		}
+	}
+	public void showOrderNoPrice() {
+		for(Items order: orders) {
+			System.out.println("Item: " + order.getVariety()
+			+ "\t Quantity: " + order.getnumItem());
 			
 		}
 	}

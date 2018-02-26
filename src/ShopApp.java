@@ -9,7 +9,7 @@ public class ShopApp {
 	Cart myOrder = new Cart();
 	Items order;
 	
-	System.out.println("Welcome to our Girl Scout Cookie Ordererer");
+	System.out.println("Welcome to your shopping cart");
 	System.out.println("Please select a task");
 	System.out.println("Press 1 to order an item");
 	System.out.println("Press 2 to remove an order");
@@ -22,11 +22,10 @@ public class ShopApp {
 	while(!choice.equals("5")) {
 		if(choice.equals("1")) {
 			System.out.println("What item would you like?");
-			//System.out.println("[Thin Mints], [Tagalongs], [Samoas], [Dosidos]");
 			String variety = input.nextLine();
 			System.out.println("What is the price of that item?");
 			double price = input.nextDouble();
-			System.out.println("How many boxes of " + variety + " do you want?");
+			System.out.println("How many " + variety + " do you want?");
 			int numItem = input.nextInt();
 			input.nextLine();
 			order = new Items(variety, price, numItem);
@@ -35,19 +34,21 @@ public class ShopApp {
 		
 		
 		else if(choice.equals("2")) {
-			System.out.println("What type of cookie do you want to remove?");
-			//System.out.println("[Thin Mints], [Tagalongs], [Samoas], [Dosidos]");
+			System.out.println("What item would you like to remove?");
+			myOrder.showOrder();
+			System.out.println();
 			String variety = input.nextLine();
 			myOrder.removeVariety(variety);
 			}
 		
 		else if(choice.equals("3")) {
-			System.out.println("What type of cookie do you want to update?");
-			//System.out.println("[Thin Mints], [Tagalongs], [Samoas], [Dosidos]");
+			System.out.println("What food do you want to update?");
+			myOrder.showOrder();
+			System.out.println();
 			String variety = input.nextLine();
 			System.out.println("What is the price of that item?");
 			double price = input.nextDouble();
-			System.out.println("Now, how many boxes of " + variety + " do you want?");
+			System.out.println("Now, how many " + variety + " do you want?");
 			int numItem = input.nextInt();
 			input.nextLine();
 			myOrder.updateOrder(variety, price, numItem);
@@ -63,7 +64,7 @@ public class ShopApp {
 			}
 		
 		else if(choice.equals("5")) {
-			System.out.println("Your total today will be $" + totalPrice + "\nThank you for shopping with us today");
+			//System.out.println("Your total today will be $" + totalPrice + "\nThank you for shopping with us today");
 			System.exit(0);
 			}
 		else {
