@@ -35,7 +35,7 @@ public class ShopApp {
 		
 		else if(choice.equals("2")) {
 			System.out.println("What item would you like to remove?");
-			myOrder.showOrder();
+			myOrder.showOrderNoPrice();
 			System.out.println();
 			String variety = input.nextLine();
 			myOrder.removeVariety(variety);
@@ -43,7 +43,7 @@ public class ShopApp {
 		
 		else if(choice.equals("3")) {
 			System.out.println("What food do you want to update?");
-			myOrder.showOrder();
+			myOrder.showOrderNoPrice();
 			System.out.println();
 			String variety = input.nextLine();
 			System.out.println("What is the price of that item?");
@@ -64,7 +64,7 @@ public class ShopApp {
 			}
 		
 		else if(choice.equals("5")) {
-			//System.out.println("Your total today will be $" + totalPrice + "\nThank you for shopping with us today");
+			//1System.out.println("Your total today will be $" + Items.getTotalPrice() + "\nThank you for shopping with us today");
 			System.exit(0);
 			}
 		else {

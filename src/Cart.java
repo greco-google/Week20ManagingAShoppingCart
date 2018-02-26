@@ -16,13 +16,19 @@ public class Cart {
 	public int getTotal() {
 		int total = 0;
 		for(Items order: orders) {
-			total += order.getnumItem() * order.getnumItem();
+			total += order.getPrice() * order.getnumItem();
 		}
 	return total;
 		
 	}
 	
-	public void totalPrice() {
+	public int totalPrice() {
+		int total = 0;
+		for(Items order: orders) {
+			double totalPrice = order.getPrice() * order.getnumItem();
+		}
+	return total;
+		
 	}
 	
 	
@@ -35,9 +41,9 @@ public class Cart {
 	}
 	
 	public void showOrder() {
-		for(Items order: orders) {
-			System.out.println("Item: " + order.getVariety() + "\t Price: $" + order.getPrice()
-			+ "\t Quantity: " + order.getnumItem() + "\nTotal Price: $" + order.getTotalPrice());
+		for(Items item: orders) {
+			System.out.println("Item: " + item.getVariety() + "\t Price: $" + item.getPrice()
+			+ "\t Quantity: " + item.getnumItem() + "\nTotal Price: $" + item.getTotalPrice());
 			
 		}
 	}
