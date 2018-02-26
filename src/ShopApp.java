@@ -72,7 +72,7 @@ public class ShopApp {
 			System.out.println("Invalid input");
 		}
 		System.out.println("Please select another Task");
-		System.out.println("Press 1 to order cookies");
+		System.out.println("Press 1 to order an item");
 		System.out.println("Press 2 to remove an order");
 		System.out.println("Press 3 to update an order");
 		System.out.println("Press 4 to view current order");
