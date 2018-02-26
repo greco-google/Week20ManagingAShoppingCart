@@ -55,7 +55,7 @@ public class ShopApp {
 
 			}
 		
-		
+		//Line 63 was giving me trouble because I thought I would use order, but in reality I needed to use myOrder
 		else if(choice.equals("4")) {
 			System.out.println();
 			System.out.println("Your Current Order: ");
