@@ -64,7 +64,7 @@ public class ShopApp {
 			}
 		
 		else if(choice.equals("5")) {
-			//1System.out.println("Your total today will be $" + Items.getTotalPrice() + "\nThank you for shopping with us today");
+			//System.out.println("Your total today will be $" + Items.getTotalPrice() + "\nThank you for shopping with us today");
 			System.exit(0);
 			}
 		else {
